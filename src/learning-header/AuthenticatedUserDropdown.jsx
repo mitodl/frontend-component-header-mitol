@@ -32,8 +32,8 @@ function AuthenticatedUserDropdown({ intl, username }) {
           <Dropdown.Item href={`${getConfig().MARKETING_SITE_BASE_URL}/u/${username}`}>
             {intl.formatMessage(messages.profile)}
           </Dropdown.Item>
-          <Dropdown.Item href={`${getConfig().LMS_BASE_URL}/account/settings`}>
-            {intl.formatMessage(messages.account)}
+          <Dropdown.Item href={`${getConfig().MARKETING_SITE_BASE_URL}/account-settings/`}>
+            {intl.formatMessage(messages.settings)}
           </Dropdown.Item>
           { getConfig().ORDER_HISTORY_URL && (
             <Dropdown.Item href={getConfig().ORDER_HISTORY_URL}>
