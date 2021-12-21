@@ -29,7 +29,7 @@ function AuthenticatedUserDropdown({ intl, username }) {
         </Dropdown.Toggle>
         <Dropdown.Menu className="dropdown-menu-right">
           {dashboardMenuItem}
-          <Dropdown.Item href={`${getConfig().MARKETING_SITE_BASE_URL}/u/${username}`}>
+          <Dropdown.Item href={`${getConfig().MARKETING_SITE_BASE_URL}/profile/`}>
             {intl.formatMessage(messages.profile)}
           </Dropdown.Item>
           <Dropdown.Item href={`${getConfig().MARKETING_SITE_BASE_URL}/account-settings/`}>

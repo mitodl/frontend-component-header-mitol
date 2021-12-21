@@ -35,7 +35,7 @@ function LearningHeader({
   const headerLogo = (
     <LinkedLogo
       className="logo"
-      href={`${getConfig().MARKETING_SITE_BASE_URL}/dashboard`}
+      href={`${getConfig().MARKETING_SITE_BASE_URL}`}
       src={getConfig().LOGO_URL}
       alt={getConfig().SITE_NAME}
     />
