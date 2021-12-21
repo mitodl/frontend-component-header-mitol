@@ -33,7 +33,7 @@ const LearningHeader = ({
   const headerLogo = (
     <LinkedLogo
       className="logo"
-      href={`${process.env.MARKETING_SITE_BASE_URL}/dashboard`}
+      href={`${getConfig().MARKETING_SITE_BASE_URL}/dashboard`}
       src={getConfig().LOGO_URL}
       alt={getConfig().SITE_NAME}
     />
