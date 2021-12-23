@@ -12,7 +12,7 @@ import messages from './messages';
 
 function AuthenticatedUserDropdown({ intl, username }) {
   const dashboardMenuItem = (
-    <Dropdown.Item href={`${getConfig().LMS_BASE_URL}/dashboard`}>
+    <Dropdown.Item href={`${getConfig().MARKETING_SITE_BASE_URL}/dashboard`}>
       {intl.formatMessage(messages.dashboard)}
     </Dropdown.Item>
   );
@@ -29,11 +29,11 @@ function AuthenticatedUserDropdown({ intl, username }) {
         </Dropdown.Toggle>
         <Dropdown.Menu className="dropdown-menu-right">
           {dashboardMenuItem}
-          <Dropdown.Item href={`${getConfig().LMS_BASE_URL}/u/${username}`}>
+          <Dropdown.Item href={`${getConfig().MARKETING_SITE_BASE_URL}/profile/`}>
             {intl.formatMessage(messages.profile)}
           </Dropdown.Item>
-          <Dropdown.Item href={`${getConfig().LMS_BASE_URL}/account/settings`}>
-            {intl.formatMessage(messages.account)}
+          <Dropdown.Item href={`${getConfig().MARKETING_SITE_BASE_URL}/account-settings/`}>
+            {intl.formatMessage(messages.settings)}
           </Dropdown.Item>
           { getConfig().ORDER_HISTORY_URL && (
             <Dropdown.Item href={getConfig().ORDER_HISTORY_URL}>
