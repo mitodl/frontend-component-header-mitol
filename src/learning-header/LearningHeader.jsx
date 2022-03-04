@@ -31,7 +31,6 @@ function LearningHeader({
   courseOrg, courseNumber, courseTitle, intl, showUserDropdown,
 }) {
   const { authenticatedUser } = useContext(AppContext);
-
   const headerLogo = (
     <LinkedLogo
       className="logo"
@@ -52,7 +51,7 @@ function LearningHeader({
         </div>
         {showUserDropdown && authenticatedUser && (
           <AuthenticatedUserDropdown
-            username={authenticatedUser.username}
+            name={getConfig().SHOW_FULLNAME == 'true' ? authenticatedUser.name : authenticatedUser.username}
           />
         )}
         {showUserDropdown && !authenticatedUser && (
