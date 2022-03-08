@@ -51,7 +51,7 @@ function LearningHeader({
         </div>
         {showUserDropdown && authenticatedUser && (
           <AuthenticatedUserDropdown
-            name={getConfig().SHOW_FULLNAME == 'true' ? authenticatedUser.name : authenticatedUser.username}
+            name={getConfig().SHOW_FULLNAME ? authenticatedUser.name : authenticatedUser.username}
           />
         )}
         {showUserDropdown && !authenticatedUser && (
