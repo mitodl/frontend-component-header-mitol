@@ -49,9 +49,9 @@ const LearningHeader = ({
           <span className="d-block m-0 font-weight-bold course-title">{courseTitle}</span>
         </div>
         {showUserDropdown && authenticatedUser && (
-        <AuthenticatedUserDropdown
-          username={authenticatedUser.username}
-        />
+          <AuthenticatedUserDropdown
+            name={getConfig().SHOW_FULLNAME ? authenticatedUser.name : authenticatedUser.username}
+          />
         )}
         {showUserDropdown && !authenticatedUser && (
         <AnonymousUserMenu />
