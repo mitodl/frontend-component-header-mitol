@@ -10,7 +10,7 @@ import { Dropdown } from '@openedx/paragon';
 
 import messages from './messages';
 
-const AuthenticatedUserDropdown = ({ intl, username }) => {
+const AuthenticatedUserDropdown = ({ intl, name }) => {
   const dashboardMenuItem = (
     <Dropdown.Item href={`${process.env.MARKETING_SITE_BASE_URL}/dashboard`}>
       {intl.formatMessage(messages.dashboard)}
@@ -33,7 +33,7 @@ const AuthenticatedUserDropdown = ({ intl, username }) => {
             {intl.formatMessage(messages.profile)}
           </Dropdown.Item>
           <Dropdown.Item href={getConfig().ACCOUNT_SETTINGS_URL}>
-            {intl.formatMessage(messages.account)}
+            {intl.formatMessage(messages.settings)}
           </Dropdown.Item>
           { getConfig().ORDER_HISTORY_URL && (
             <Dropdown.Item href={getConfig().ORDER_HISTORY_URL}>

@@ -27,7 +27,7 @@ ensureConfig([
 subscribe(APP_CONFIG_INITIALIZED, () => {
   mergeConfig({
     AUTHN_MINIMAL_HEADER: !!process.env.AUTHN_MINIMAL_HEADER,
-    SHOW_FULLNAME: process.env.SHOW_FULLNAME
+    SHOW_FULLNAME: process.env.SHOW_FULLNAME,
   }, 'Header additional config');
 });
 
