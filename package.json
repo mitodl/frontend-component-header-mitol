@@ -1,6 +1,6 @@
 {
   "name": "@mitodl/frontend-component-header-mitol",
-  "version": "5.0.5",
+  "version": "5.0.6",
   "description": "The standard header for MITx",
   "main": "dist/index.js",
   "publishConfig": {
